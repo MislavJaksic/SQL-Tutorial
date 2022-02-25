@@ -43,6 +43,7 @@ Optionally, you can create the tables first, then import the CSV.
 
 ### Syntax
 
+```
 SELECT Expressions
 FROM Table-Name
 JOIN Table-Name ON Clause
@@ -52,6 +53,7 @@ GROUP BY Expressions
 HAVING Clause
 ORDER BY Expressions
 LIMIT Number
+```
 
 See [Syntax under Research](Research/Syntax).  
 
@@ -64,3 +66,43 @@ See [Syntax under Research](Research/Syntax).
 5) SELECT (including window functions)
 6) ORDER BY
 7) LIMIT
+
+### Aggregate functions
+
+* COUNT: does not count NULLs. Count NULLs with `*`
+* SUM
+* MIN, MAX
+* AVG
+* DISTINCT: not a true aggregate function
+
+### Date and time
+
+* Subtract days: date(date, '-' || temperature || ' days')
+
+### Common Table Expression (CTE, WITH)
+
+A named temporary result set.  
+Concise, replaces subqueries, allows recursive CTEs.  
+
+```
+WITH Cte-Table-1 AS (...),
+     Cte-Table-2 AS (...)
+SELECT ... FROM Cte-Table-1
+```
+
+### Window Functions
+
+```
+aggregate_window_function() OVER (PARTITION BY Expressions
+                                  ORDER BY Expressions
+                                  ROWS/RANGE/GROUPS Keywords/Expressions)
+```
+
+Keywords:
+* BETWEEN
+* UNBOUNDED
+* PRECEDING
+* CURRENT ROW
+* FOLLOWING
+
+See [WindowFunction under Research](Research/WindowFunction).  
