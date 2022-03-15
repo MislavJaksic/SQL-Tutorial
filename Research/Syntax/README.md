@@ -124,11 +124,11 @@ Most often used in WHERE and HAVING:
 
 Think about them top-down and how rows need to be transformed to allow aggregate functions to work.  
 
-COUNT: does not count NULLs. Count NULLs with `*`
-SUM
-MIN, MAX
-AVG
-DISTINCT: not a true aggregate function
+* COUNT: does not count NULLs. Count NULLs with `*`
+* SUM
+* MIN, MAX
+* AVG
+* DISTINCT: not a true aggregate function
 
 ### CASE WHEN blocks
 

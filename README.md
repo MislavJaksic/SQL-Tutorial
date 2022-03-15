@@ -77,7 +77,7 @@ See [Syntax under Research](Research/Syntax).
 
 ### Date and time
 
-* Subtract days: date(date, '-' || temperature || ' days')
+* Subtract days: `date(Column-Name, '-' || Column-Name || ' days')`
 
 ### Common Table Expression (CTE, WITH)
 
@@ -106,3 +106,11 @@ Keywords:
 * FOLLOWING
 
 See [WindowFunction under Research](Research/WindowFunction).  
+
+### Self-joins
+
+ToDo
+
+### Tips and tricks
+
+Problems that involve consecutivness: use rank() and then subtract a number from a column and then group by the new column
